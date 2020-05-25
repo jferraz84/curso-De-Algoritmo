@@ -4,17 +4,17 @@ public class TestaMenorPreco {
 
     public static void main(String[] args) {
 
-        Produto produtos[] = new Produto[5];
+        Produto produtos[] = {
 
-        produtos[0] = new Produto("Lamborghini", 1000000);
-        produtos[1] = new Produto("Jioe", 46000);
-        produtos[2] = new Produto("Brasilia", 16000);
-        produtos[3] = new Produto("Cobalt", 47000);
-        produtos[4] = new Produto("New Civic", 35000);
-
+                new Produto("Lamborghini", 1000000),
+                new Produto("Jipe", 46000),
+                new Produto("Brasilia", 16000),
+                new Produto("Cobalt", 47000),
+                new Produto("New Civic", 35000)
+       };
 
         produtos.toString();
-            System.out.println("O mais caro é ");
+        System.out.println("o Carro mais barato é " );
 
     }
 }

@@ -24,6 +24,5 @@ public class DescobriMenorSalario {
         }
         System.out.println("O maior salario é: " + salario[maiorSalario]);
         System.out.println("O menor salario é: " + salario[menorSalario]);
-
     }
 }
