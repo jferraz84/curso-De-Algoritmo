@@ -11,10 +11,7 @@ public class TestaMenorPreco {
                 new Produto("Brasilia", 16000),
                 new Produto("Cobalt", 47000),
                 new Produto("New Civic", 35000)
-       };
-
-        produtos.toString();
-        System.out.println("o Carro mais barato é " );
+        };
 
     }
 }

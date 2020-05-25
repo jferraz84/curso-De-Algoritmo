@@ -26,38 +26,6 @@ public class Produto {
         this.preco = preco;
     }
 
-    private static int buscaMaior(Produto[] produtos) {
 
-        int maisCaro = 0;
-        int termino = produtos.length -1;
-
-        for (int atual = 0; atual < produtos.length; atual++) {
-            if (produtos[atual].getPreco() > produtos[maisCaro].getPreco()) {
-                maisCaro = atual;
-
-            }
-        }
-        return maisCaro;
-    }
-
-    private static int buscaMenor(Produto[] produtos) {
-
-        int maisBarato = 0;
-        int termino = produtos.length -1;
-
-        for (int atual = 0; atual < produtos.length; atual++) {
-            if (produtos[atual].getPreco() < produtos[maisBarato].getPreco()){
-                maisBarato = atual;
-            }
-        }
-        return maisBarato;
-    }
-
-    @Override
-    public String toString() {
-        return "Produtos " +
-                "nome = '" + nome + '\'' +
-                ", preco = " + preco ;
-    }
 }
 
