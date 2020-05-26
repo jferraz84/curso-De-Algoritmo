@@ -16,14 +16,15 @@ public class OrdenacaoDeString {
                 "Paulo"
         };
 
-        String[] rank = intercala(nomes, 0, 5, nomes.length);
+        String[] nome = intercala(nomes, 0, 4, nomes.length);
         System.out.println("OS nomes ordenados são: ");
-        for (String string : rank) {
+        for (String string : nome) {
             System.out.println(nomes);
         }
     }
 
     private static String[] intercala(String[] nomes, int inicio, int meio, int termino) {
+        //String[] resultado = new String[termino - inicio];
 
         int total = termino - inicio;
         String[] resultado = new String[total];
@@ -59,6 +60,6 @@ public class OrdenacaoDeString {
         for (int contador = 0; contador < atual; contador++) {
             nomes[inicio + contador] = resultado[contador];
         }
-        return resultado;
+        return nomes;
     }
 }
