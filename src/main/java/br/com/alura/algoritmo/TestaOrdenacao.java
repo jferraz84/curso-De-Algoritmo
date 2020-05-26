@@ -14,7 +14,7 @@ public class TestaOrdenacao {
         };
 
         //selectionSort(produtos, produtos.length);
-        novoSort(produtos, produtos.length);
+        insertionSort(produtos, produtos.length);
         imprime(produtos);
 
     }
@@ -26,7 +26,7 @@ public class TestaOrdenacao {
         }
 
 
-    private static void novoSort(Produto[] produtos, int qtdDeElementos){
+    private static void insertionSort(Produto[] produtos, int qtdDeElementos){
         for (int atual = 1; atual < qtdDeElementos ; atual++) {
 
             System.out.println("Estou na casa " +atual);
@@ -73,7 +73,6 @@ public class TestaOrdenacao {
                 maisBarato = atual;
             }
         }
-
         return maisBarato;
 
     }
