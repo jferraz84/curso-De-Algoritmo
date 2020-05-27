@@ -1,5 +1,7 @@
 package br.com.alura.notas;
 
+import org.omg.IOP.ENCODING_CDR_ENCAPS;
+
 public class TestaOrdenacaoRapida {
 
     public static void main(String[] args) {
@@ -17,9 +19,14 @@ public class TestaOrdenacaoRapida {
         };
 
         ordena(notas, 0, notas.length);
-        int encontrei = busca(notas, 0, notas.length, 9.3);
-        System.out.println("Encontrei a nota em " + encontrei);
-
+        int encontrei = busca(notas, 0, notas.length, 8.3);
+        if (encontrei >= 0 ) {
+            System.out.println("Encontrei a nota em " + encontrei);
+        } else {
+            System.out.println("-----------------------");
+            System.out.println("| Nota NÂO ENCONTRADA!|");
+            System.out.println("-----------------------");
+        }
 
         for (int atual = 0; atual < notas.length; atual++){
             Nota nota = notas[atual];
@@ -28,13 +35,21 @@ public class TestaOrdenacaoRapida {
     }
 
     private static int busca(Nota[] notas, int de, int ate, double buscando) {
+        System.out.println("Buscando "+buscando + " entre " +de+ " e " +ate);
 
-        for (int atual = de; atual < ate; atual++){
-            if(notas[atual].getValor() == buscando) {
-                return atual;
-            }
+        if (de > ate){
+            return -1;
         }
-        return -1;
+
+        int meio = (de + ate) /2;
+        Nota nota = notas[meio];
+        if (buscando == nota.getValor()){
+            return meio;
+        }
+        if (buscando < nota.getValor()){
+            return busca(notas, de, meio -1, buscando);
+        }
+        return busca(notas, meio + 1, ate, buscando);
     }
 
     private static void ordena(Nota[] notas, int de, int ate) {
